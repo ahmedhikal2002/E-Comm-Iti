@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+@layer components {
+  .light {
+    @apply bg-slate-100;
+  }
+  .dark {
+    @apply bg-slate-700;
+  }
+
+  .nav {
+    @apply bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800 shadow-sm;
+  }
+  .nav .header-container {
+    @apply flex flex-wrap justify-between items-center mx-auto max-w-screen-xl;
+  }
+
+  .nav .header-container .head-links {
+    @apply hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1;
+  }
+
+  .nav .header-container .head-links .head-link {
+    @apply block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent  transition-all
+      lg:p-0 text-gray-700 dark:text-white hover:text-primary-500 dark:hover:text-primary-600;
+  }
+
+  .social {
+    @apply relative text-gray-700 dark:text-gray-50 
+  hover:text-black dark:hover:text-white 
+  transition-all duration-300 
+  hover:scale-110;
+  }
+
+  .social::after {
+    content: "";
+    @apply absolute left-0 bottom-[-4px] w-0 h-[2px] bg-black dark:bg-white transition-all duration-300;
+  }
+
+  .social:hover::after {
+    @apply w-full;
+  }
+
+  input {
+    @apply bg-gray-100 px-4 py-3 rounded-md focus:outline-none transition w-full text-sm;
+  }
+
+  input:placeholder-shown {
+    @apply bg-gray-100 border-gray-300 ring-0;
+  }
+
+  input.touched:invalid {
+    @apply border-red-500 ring-2 ring-red-400 bg-red-300;
+  }
+
+  input.touched:valid {
+    @apply border-green-500 ring-2 ring-green-400 bg-green-200;
+  }
+
+  .categories {
+    @apply px-[10%] py-6 grid grid-cols-1 md:grid-cols-2 gap-4;
+  }
+  .categories div {
+    @apply bg-white dark:bg-slate-800 text-black dark:text-white transition-all duration-300 hover:scale-105 active:scale-75;
+  }
+}

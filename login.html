@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div
+      class="min-h-screen bg-gradient-to-r from-slate-900 via-gray-900 to-black flex items-center justify-center p-6"
+    >
+      <div class="grid md:grid-cols-2 items-center gap-10 max-w-6xl w-full">
+        <div class="max-w-lg max-md:mx-auto max-md:text-center">
+          <div class="flex items-center gap-2 mb-6">
+            <img
+              class="h-20"
+              src="./imgs/ChatGPT Image Mar 28, 2026, 05_28_24 PM.png"
+              alt="logo"
+            />
+            <span class="text-white ml-[-15px] font-bold text-3xl">E-Comm</span>
+          </div>
+
+          <h1 class="text-4xl font-semibold leading-tight text-white">
+            Welcome Back to Your Shopping Experience
+          </h1>
+
+          <p class="text-[15px] mt-6 text-white leading-relaxed">
+            Sign in to explore our latest products, manage your cart, and enjoy
+            exclusive deals tailored just for you. Fast, secure, and easy access
+            to your favorite items.
+          </p>
+        </div>
+
+        <form
+          class="bg-white rounded-xl px-8 py-12 max-w-md md:ml-auto max-md:mx-auto w-full shadow-xl"
+        >
+          <h2 class="text-slate-900 text-3xl font-bold mb-8">
+            Sign in to your account
+          </h2>
+
+          <div class="space-y-4">
+            <div>
+              <input
+                name="username"
+                id="username"
+                type="text"
+                autocomplete="username"
+                required
+                pattern="mor_2314"
+                value="mor_2314"
+                placeholder="username is mor_2314"
+              />
+            </div>
+
+            <div>
+              <input
+                name="password"
+                type="password"
+                id="password"
+                autocomplete="current-password"
+                pattern="83r5\^_"
+                required
+                value="83r5^_"
+                placeholder="Password is 83r5^_"
+              />
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <button
+              type="submit"
+              class="w-full shadow-lg py-3 px-6 text-[15px] font-medium rounded-md text-white bg-slate-800 hover:bg-slate-900 transition cursor-pointer"
+            >
+              Sign in
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
